@@ -3,7 +3,6 @@ require.config({
     paths: {
         jquery: 'lib/jquery',
         underscore: 'lib/underscore',
-        dn: 'scripts/modules',
         qs: 'qs/widgets'
     },
     shim: {
