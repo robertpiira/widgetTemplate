@@ -1,0 +1,26 @@
+{
+  "name": "widgetLoader",
+  "version": "0.0.0",
+  "homepage": "https://github.com/robertpiira/widgetTemplate",
+  "authors": [
+    "robertpiira <robert@piira.se>"
+  ],
+  "description": "widget loader with requirejs",
+  "main": "main.js",
+  "keywords": [
+    "widgets"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.6.0",
+    "dustjs": "~0.3.0"
+  }
+}

@@ -1,5 +1,7 @@
 
-define(['jquery', 'underscore', 'text!qs/widgets/qs-fruit-special/template/qs-widget.html'], function ($, _, html) {
+define(['jquery', 'underscore', 'dust', 'text!qs/widgets/qs-fruit-special/template/qs-widget.html'], function ($, _, dust, html) {
+
+    console.log(dust);
 
     return {
 
