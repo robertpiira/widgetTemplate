@@ -2,13 +2,8 @@
 ({
     baseUrl: ".",
     paths: {
-        jquery: 'lib/jquery',
-        underscore: 'lib/underscore'
-    },
-    shim: {
-        underscore: {
-            exports: '_'
-        }
+        jquery: 'vendor/jquery',
+        qsWidgetLoader: 'vendor/qs_widget_loader_v2'
     },
     name: "main",
     out: "main-built.js"

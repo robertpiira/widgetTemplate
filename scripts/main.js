@@ -1,9 +1,10 @@
 
 require.config({
     paths: {
-        jquery: 'lib/jquery',
-        underscore: 'lib/underscore',
-        qs: 'qs/widgets'
+        jquery: 'vendor/jquery',
+        underscore: 'vendor/underscore',
+        qsWidgetLoader: 'vendor/qs_widget_loader_v2',
+        qs: 'qs/'
     },
     shim: {
         underscore: {
@@ -13,11 +14,11 @@ require.config({
 });
 
 
-require(['jquery', 'myLib/qs_widget_loader_v2'], function($, qsLoader) {
+require(['jquery', 'qsWidgetLoader'], function($, qsWidgetLoader) {
 
     var nodes = $('[data-widget-type]');
 
-    qsLoader.init(nodes);
+    qsWidgetLoader.init(nodes);
 
 });
 

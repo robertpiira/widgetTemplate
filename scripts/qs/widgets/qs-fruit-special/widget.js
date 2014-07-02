@@ -1,21 +1,9 @@
 
-define(['jquery', 'underscore', 'text!qs/qs-fruit-special/template/qs-widget.html'], function ($, _, html) {
+define(['jquery', 'underscore', 'text!qs/widgets/qs-fruit-special/template/qs-widget.html'], function ($, _, html) {
 
+    return {
 
-    var _this;
-
-    var fruitWidget = function (el, data) {
-
-        this.data = data;
-        this.el = el;
-        this.$el = $(el);
-
-    };
-
-
-    fruitWidget.prototype = {
-
-        boostrap: function () {
+        init: function () {
 
             var $html = $(_.template(html, { title: this.data.title, foods: this.data.data, favo: '' }));
             this.$el.append($html);
@@ -26,30 +14,17 @@ define(['jquery', 'underscore', 'text!qs/qs-fruit-special/template/qs-widget.htm
 
         events: function () {
 
-            this.$el.on('click', '.js-reco-btn', $.proxy(this.pickFood, this));
+            this.$el.on('click', '.js-reco-btn', $.proxy(this.doTheShuffle, this));
 
         },
 
 
-        pickFood: function () {
+        doTheShuffle: function () {
 
             var shuffledData = _.shuffle(this.data.data);
 
             var $html = $(_.template(html, { title: this.data.title, foods: shuffledData, favo: '' }));
             this.$el.html($html);
-
-        }
-
-    };
-
-
-    return {
-
-        init: function (el, data) {
-
-            var widget = new fruitWidget(el, data);
-
-            widget.boostrap();
 
         }
 

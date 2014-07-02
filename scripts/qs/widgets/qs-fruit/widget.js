@@ -1,21 +1,9 @@
 
-define(['jquery', 'underscore', 'text!qs/qs-fruit/template/qs-widget.html'], function ($, _, html) {
+define(['jquery', 'underscore', 'text!qs/widgets/qs-fruit/template/qs-widget.html'], function ($, _, html) {
 
+    return {
 
-    var _this;
-
-    var fruitWidget = function (el, data) {
-
-        this.data = data;
-        this.el = el;
-        this.$el = $(el);
-
-    };
-
-
-    fruitWidget.prototype = {
-
-        boostrap: function () {
+        init: function () {
 
             var $html = $(_.template(html, { title: 'underscore template!', foods: this.data, favo: '' }));
             this.$el.append($html);
@@ -42,20 +30,6 @@ define(['jquery', 'underscore', 'text!qs/qs-fruit/template/qs-widget.html'], fun
 
     };
 
-
-    return {
-
-        init: function (el, data) {
-
-            console.dir(el);
-
-            var widget = new fruitWidget(el, data);
-
-            widget.boostrap();
-
-        }
-
-    };
 
 });
 
