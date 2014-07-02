@@ -1,0 +1,22 @@
+
+
+<div class="qs container">
+
+    <header id="header">
+        <h1><%= title %></h1>
+    </header>
+
+    <div id="foods">
+        <ul>
+        <% _.each(foods,function(food) { %>
+            <li>
+            <%=  food  %>
+            </li>
+        <% });  %>
+    </ul>
+    </div>
+
+    <button class="btn js-reco-btn">My random favo food</button>
+
+</div>
+
