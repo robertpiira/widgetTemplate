@@ -20,7 +20,6 @@
     "tests"
   ],
   "dependencies": {
-    "underscore": "~1.6.0",
-    "dustjs": "~0.3.0"
+    "lodash": "~2.4.1"
   }
 }

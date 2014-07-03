@@ -2,18 +2,10 @@
 require.config({
     paths: {
         jquery: 'vendor/jquery',
-        underscore: 'vendor/underscore',
-        qsWidgetLoader: 'vendor/qs_widget_loader_v2',
-        dust: 'qs/bower_components/dustjs/dist/dust-core-0.3.0.min',
+        lodash: 'qs/bower_components/lodash/dist/lodash.min',
+        qsWidgetLoader: 'qs/qs_widget_loader_v2',
+        qsWidgetModel: 'qs/qs_widget_model',
         qs: 'qs'
-    },
-    shim: {
-        underscore: {
-            exports: '_'
-        },
-        dust: {
-            exports: 'dust'
-        }
     }
 });
 

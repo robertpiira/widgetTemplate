@@ -1,5 +1,5 @@
 
-define([], function () {
+define(['qsWidgetModel'], function (Model) {
 
   'use strict';
 
@@ -14,7 +14,7 @@ define([], function () {
         widget = 'qs/widgets/' + node.getAttribute('data-widget-type') + '/widget';
         data = node.getAttribute('data-widget-src') ? 'qs/widgets/' + node.getAttribute('data-widget-type') + '/data/' + node.getAttribute('data-widget-src') : null;
 
-        require([widget, data, 'vendor/qs_widget_model'], function (widget, data, Model) {
+        require([widget, data], function (widget, data) {
 
           Model.prototype = widget;
           new Model(node, data).init();

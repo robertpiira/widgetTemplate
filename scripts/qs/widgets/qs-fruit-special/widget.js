@@ -1,7 +1,5 @@
 
-define(['jquery', 'underscore', 'dust', 'text!qs/widgets/qs-fruit-special/template/qs-widget.html'], function ($, _, dust, html) {
-
-    console.log(dust);
+define(['jquery', 'lodash', 'text!qs/widgets/qs-fruit-special/template/qs-widget.html'], function ($, _, html) {
 
     return {
 
@@ -11,6 +9,8 @@ define(['jquery', 'underscore', 'dust', 'text!qs/widgets/qs-fruit-special/templa
             this.$el.append($html);
 
             this.events();
+
+            console.log('Init: fruit special widget', this);
 
         },
 

@@ -1,7 +1,7 @@
 
-define(['jquery', 'underscore', 'text!qs/widgets/qs-fruit/template/qs-widget.html'], function ($, _, html) {
+define(['jquery', 'lodash', 'text!qs/widgets/qs-fruit/template/qs-widget.html'], function ($, _, html) {
 
-    return {
+    widget = {
 
         init: function () {
 
@@ -9,6 +9,8 @@ define(['jquery', 'underscore', 'text!qs/widgets/qs-fruit/template/qs-widget.htm
             this.$el.append($html);
 
             this.events();
+
+            console.log('Init: fruit widget', this);
 
         },
 
@@ -29,6 +31,8 @@ define(['jquery', 'underscore', 'text!qs/widgets/qs-fruit/template/qs-widget.htm
         }
 
     };
+
+    return widget;
 
 
 });

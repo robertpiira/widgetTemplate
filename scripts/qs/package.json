@@ -1,0 +1,22 @@
+{
+  "name": "widgetTemplate",
+  "version": "0.0.0",
+  "description": "Drives web widgets",
+  "main": "scripts/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "robertpiira",
+  "license": "ISC",
+  "dependencies": {
+    "require": "~2.1.9"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-concat": "~0.3",
+    "grunt-contrib-clean": "~0.5",
+    "grunt-contrib-copy": "~0.4",
+    "load-grunt-tasks": "~0.4.0"
+  }
+}
